@@ -2,7 +2,7 @@ import pickle
 import json
 import numpy as np
 from flask import Flask , request,render_template
-
+import config 
 
 class select_flower():
     def __init__(self,data):
@@ -11,10 +11,10 @@ class select_flower():
 
     def import_files(self):
 
-        with open("artifacts/fmodel.pkl","rb") as file:
+        with open(config.MODEL_PATH,"rb") as file:
             self.model = pickle.load(file)
        
-        with open("artifacts/encoded_value.json","r") as flower_file:
+        with open(config.J_FILE_PATH,"r") as flower_file:
             client_given_val = json.load(flower_file)
 
         input_list = client_given_val['input_feature']
