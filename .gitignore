@@ -1,8 +1,6 @@
 # JUPYTER AND DATASET
- iris.csv 
+iris.csv 
  
-
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
